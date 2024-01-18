@@ -52,9 +52,7 @@
             "@composer require mockery/mockery",
             "@composer require spatie/laravel-permission",
             "@composer require spatie/laravel-sitemap",
-            "@composer require spatie/laravel-menu",
-            "@composer require laravel/ui",
-            "yes | @php artisan ui bootstrap --auth"
+            "@composer require spatie/laravel-menu"
         ]
     },
     "extra": {
