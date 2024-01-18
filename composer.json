@@ -47,7 +47,19 @@
             "@php -r \"file_exists('.env') || copy('.env.example', '.env');\""
         ],
         "post-create-project-cmd": [
-            "@php artisan key:generate --ansi"
+            "@php artisan key:generate --ansi",
+            "@composer require league/flysystem-ftp",
+            "@composer require mockery/mockery",
+            "@composer require spatie/laravel-permission",
+            "@composer require spatie/laravel-sitemap",
+            "@composer require spatie/laravel-menu",
+            "@composer require spatie/laravel-webhook-client",
+            "@php artisan vendor:publish --provider=\"Spatie\\WebhookClient\\WebhookClientServiceProvider\" --tag=\"webhook-client-config\"",
+            "@php artisan vendor:publish --provider=\"Spatie\\WebhookClient\\WebhookClientServiceProvider\" --tag=\"webhook-client-migrations\"",
+            "@composer require laravel/ui",
+            "@php artisan ui bootstrap --auth",
+            "@npm install",
+            "@npm run build"
         ]
     },
     "extra": {
